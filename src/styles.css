@@ -3,21 +3,32 @@
   font-family: sans-serif;
 }
 
+:root {
+  --numbers-color: rgb(86, 142, 247);
+  --hands-color: rgb(86, 142, 247);
+  --timeSetTo-color:rgb(219, 139, 163);
+  --number-font-size: 22px;
+}
+
 .container{
   margin: auto;
-  width: 600px;
-  height: 400px;
+  max-width: 600px;
+  width: 600vw;
+  max-height: 400px;
+  height: 400vh;
   position: relative;
   text-align: center;
-  padding: 15px;
+  padding: 1.2rem;
   box-shadow: 0 2px 30px rgba(255, 255, 255, 0);
-  color: rgb(219, 139, 163);
+  color: var(--timeSetTo-color);
   
 }
 
 .clock {
-  width: 300px;
-  height: 300px;
+  max-width: 300px;
+  width: 300vw;
+  max-height: 300px;
+  height: 300vh;
   border-radius: 50%;
   position: absolute;
   top: 20%;
@@ -30,7 +41,7 @@
 }
 
 .clock::after {
-  background: rgb(86, 142, 247);
+  background: var(--hands-color);
   content: "";
   width: 12px;
   height: 12px;
@@ -47,7 +58,7 @@
   position: absolute;
   width: 6px;
   height: 60px;
-  background: rgb(86, 142, 247);
+  background: var(--hands-color);
   top: 30%;
   left: 49%;
   transform-origin: bottom;
@@ -57,7 +68,7 @@
   position: absolute;
   width: 4px;
   height: 80px;
-  background: rgb(86, 142, 247);
+  background: var(--hands-color);
   top: 22.5%;
   left: 49%;
   transform-origin: bottom;
@@ -67,7 +78,7 @@
   position: absolute;
   width: 2px;
   height: 118px;
-  background: rgb(86, 142, 247);
+  background: var(--hands-color);
   top: 10.5%;
   left: 50%;
   transform-origin: bottom;
@@ -79,81 +90,197 @@
   font-weight: 700;
 }
 
-.twelve {
-  top: 10px;
-  left: 46%;
-  color: rgb(86, 142, 247);
+.button12 {
+  position: absolute;
+  background-color: #ffffff;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: var(--number-font-size);
+  margin: 2px 2px;
+  cursor: pointer;
+  top: 5%;
+  left: 45%;
+  color: var(--numbers-color);
 }
 
-.one {
+.button1 {
+  position: absolute;
+  background-color: #ffffff;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: var(--number-font-size);
+  margin: 2px 2px;
+  cursor: pointer;
   top: 10%;
-  right: 26%;
-  color: rgb(86, 142, 247);
+  right: 24%;
+  color: var(--numbers-color);
 }
 
-.eleven {
+.button11 {
+  position: absolute;
+  background-color: #ffffff;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: var(--number-font-size);
+  margin: 2px 2px;
+  cursor: pointer;
   top: 10%;
   left: 26%;
-  color: rgb(86, 142, 247);
+  color: var(--numbers-color);
 }
 
-.two {
+.button2 {
+  position: absolute;
+  background-color: #ffffff;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: var(--number-font-size);
+  margin: 2px 2px;
+  cursor: pointer;
   top: 25%;
   right: 10%;
-  color: rgb(86, 142, 247);
+  color: var(--numbers-color);
 }
 
-.three {
-  right: 10px;
+.button3 {
+  position: absolute;
+  background-color: #ffffff;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: var(--number-font-size);
+  margin: 2px 2px;
+  cursor: pointer;
   top: 46%;
-  color: rgb(86, 142, 247);
+  right: 5%;
+  color: var(--numbers-color);
 }
 
-.four {
-  right: 30px;
+.button4 {
+  position: absolute;
+  background-color: #ffffff;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: var(--number-font-size);
+  margin: 2px 2px;
+  cursor: pointer;
   top: 67%;
-  color: rgb(86, 142, 247);
+  right: 10%;
+  color: var(--numbers-color);
 }
 
-.five {
-  right: 78px;
+.button5 {
+  position: absolute;
+  background-color: #ffffff;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: var(--number-font-size);
+  margin: 2px 2px;
+  cursor: pointer;
   top: 80%;
-  color: rgb(86, 142, 247);
+  right: 24%;
+  color: var(--numbers-color);
 }
 
-.six {
-  bottom: 10px;
-  left: 50%;
-  color: rgb(86, 142, 247);
+.button6 {
+  position: absolute;
+  background-color: #ffffff;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: var(--number-font-size);
+  margin: 2px 2px;
+  cursor: pointer;
+  bottom: 2%;
+  left: 46%;
+  color: var(--numbers-color);
 }
 
-.seven {
-  left: 80px;
+.button7 {
+  position: absolute;
+  background-color: #ffffff;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: var(--number-font-size);
+  margin: 2px 2px;
+  cursor: pointer;
   top: 82%;
-  color: rgb(86, 142, 247);
+  left: 26%;
+  color: var(--numbers-color);
 }
 
-.eight {
-  left: 30px;
+.button8 {
+  position: absolute;
+  background-color: #ffffff;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: var(--number-font-size);
+  margin: 2px 2px;
+  cursor: pointer;
   top: 67%;
-  color: rgb(86, 142, 247);
+  left: 10%;
+  color: var(--numbers-color);
 }
 
-.nine {
-  left: 10px;
+.button9 {
+  position: absolute;
+  background-color: #ffffff;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: var(--number-font-size);
+  margin: 2px 2px;
+  cursor: pointer;
   top: 46%;
-  color: rgb(86, 142, 247);
+  left: 6%;
+  color: var(--numbers-color);
 }
 
-.ten {
+.button10 {
+  position: absolute;
+  background-color: #ffffff;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: var(--number-font-size);
+  margin: 2px 2px;
+  cursor: pointer;
   top: 25%;
   left: 10%;
-  color: rgb(86, 142, 247);
+  color: var(--numbers-color);
 }
 
 .ampm {
-  top: 1%;
-  left: 1%;
-  color: rgb(86, 142, 247);
+  position: absolute;
+  background-color: #ffffff00;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: var(--number-font-size);
+  margin: 2px 2px;
+  cursor: pointer;
+  top: 0.1%;
+  left: 0.1%;
+  color: var(--numbers-color);
 }
-

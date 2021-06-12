@@ -7,10 +7,9 @@ export default class Clock extends Component {
       time: new Date(),
       isPickingHours: true,
       isAm: false,
-      hour: 12,
-      minute: '00',
-      bn: 'am',
-      check: true
+      setHour: 12,
+      setMinute: '00',
+      setAmOrPm: 'am'
       };
   }
 
@@ -22,14 +21,14 @@ export default class Clock extends Component {
     }, 1000);
   }
 
-  componentWillMount() {
+  /*componentWillMount() {
     clearInterval(this.timerId);
-  }
+  }*/
 
   render() {
     return (
       <div className="container">
-        <h2>Time set to {this.state.hour}:{this.state.minute} {this.state.bn}</h2>
+        <h2>Time set to {this.state.setHour}:{this.state.setMinute} {this.state.setAmOrPm}</h2>
         <div className="clock">
           <div
             className="hour_hand"
@@ -53,44 +52,44 @@ export default class Clock extends Component {
           {
             this.state.isPickingHours ?
               <>
-                <span className="twelve" onClick={()=>this.setState({isPickingHours: false,hour: 12})}>12</span>
-                <span className="one" onClick={()=>this.setState({isPickingHours: false,hour: 1})}>1</span>
-                <span className="two" onClick={()=>this.setState({isPickingHours: false,hour: 2})}>2</span>
-                <span className="three" onClick={()=>this.setState({isPickingHours: false,hour: 3})}>3</span>
-                <span className="four" onClick={()=>this.setState({isPickingHours: false,hour: 4})}>4</span>
-                <span className="five" onClick={()=>this.setState({isPickingHours: false,hour: 5})}>5</span>
-                <span className="six" onClick={()=>this.setState({isPickingHours: false,hour: 6})}>6</span>
-                <span className="seven" onClick={()=>this.setState({isPickingHours: false,hour: 7})}>7</span>
-                <span className="eight" onClick={()=>this.setState({isPickingHours: false,hour: 8})}>8</span>
-                <span className="nine" onClick={()=>this.setState({isPickingHours: false,hour: 9})}>9</span>
-                <span className="ten" onClick={()=>this.setState({isPickingHours: false,hour: 10})}>10</span>
-                <span className="eleven" onClick={()=>this.setState({isPickingHours: false,hour: 11})}>11</span>
+                <button className="button12" onClick={()=>this.setState({isPickingHours: false,setHour: 12})}>12</button>
+                <button className="button1" onClick={()=>this.setState({isPickingHours: false,setHour: 1})}>1</button>
+                <button className="button2" onClick={()=>this.setState({isPickingHours: false,setHour: 2})}>2</button>
+                <button className="button3" onClick={()=>this.setState({isPickingHours: false,setHour: 3})}>3</button>
+                <button className="button4" onClick={()=>this.setState({isPickingHours: false,setHour: 4})}>4</button>
+                <button className="button5" onClick={()=>this.setState({isPickingHours: false,setHour: 5})}>5</button>
+                <button className="button6" onClick={()=>this.setState({isPickingHours: false,setHour: 6})}>6</button>
+                <button className="button7" onClick={()=>this.setState({isPickingHours: false,setHour: 7})}>7</button>
+                <button className="button8" onClick={()=>this.setState({isPickingHours: false,setHour: 8})}>8</button>
+                <button className="button9" onClick={()=>this.setState({isPickingHours: false,setHour: 9})}>9</button>
+                <button className="button10" onClick={()=>this.setState({isPickingHours: false,setHour: 10})}>10</button>
+                <button className="button11" onClick={()=>this.setState({isPickingHours: false,setHour: 11})}>11</button>
 
               </>
             :
               <>
-                <span className="twelve" onClick={()=>this.setState({isPickingHours: true,minute: '00'})}>0</span>
-                <span className="one" onClick={()=>this.setState({isPickingHours: true,minute: '05'})}>5</span>
-                <span className="two" onClick={()=>this.setState({isPickingHours: true,minute: '10'})}>10</span>
-                <span className="three" onClick={()=>this.setState({isPickingHours: true,minute: '15'})}>15</span>
-                <span className="four" onClick={()=>this.setState({isPickingHours: true,minute: '20'})}>20</span>
-                <span className="five" onClick={()=>this.setState({isPickingHours: true,minute: '25'})}>25</span>
-                <span className="six" onClick={()=>this.setState({isPickingHours: true,minute: '30'})}>30</span>
-                <span className="seven" onClick={()=>this.setState({isPickingHours: true,minute: '35'})}>35</span>
-                <span className="eight" onClick={()=>this.setState({isPickingHours: true,minute: '40'})}>40</span>
-                <span className="nine" onClick={()=>this.setState({isPickingHours: true,minute: '45'})}>45</span>
-                <span className="ten" onClick={()=>this.setState({isPickingHours: true,minute: '50'})}>50</span>
-                <span className="eleven" onClick={()=>this.setState({isPickingHours: true,minute: '55'})}>55</span>
+                <button className="button12" onClick={()=>this.setState({isPickingHours: true,setMinute: '00'})}>0</button>
+                <button className="button1" onClick={()=>this.setState({isPickingHours: true,setMinute: '05'})}>5</button>
+                <button className="button2" onClick={()=>this.setState({isPickingHours: true,setMinute: '10'})}>10</button>
+                <button className="button3" onClick={()=>this.setState({isPickingHours: true,setMinute: '15'})}>15</button>
+                <button className="button4" onClick={()=>this.setState({isPickingHours: true,setMinute: '20'})}>20</button>
+                <button className="button5" onClick={()=>this.setState({isPickingHours: true,setMinute: '25'})}>25</button>
+                <button className="button6" onClick={()=>this.setState({isPickingHours: true,setMinute: '30'})}>30</button>
+                <button className="button7" onClick={()=>this.setState({isPickingHours: true,setMinute: '35'})}>35</button>
+                <button className="button8" onClick={()=>this.setState({isPickingHours: true,setMinute: '40'})}>40</button>
+                <button className="button9" onClick={()=>this.setState({isPickingHours: true,setMinute: '45'})}>45</button>
+                <button className="button10" onClick={()=>this.setState({isPickingHours: true,setMinute: '50'})}>50</button>
+                <button className="button11" onClick={()=>this.setState({isPickingHours: true,setMinute: '55'})}>55</button>
               </>
           }
           {
                 this.state.isAm ?
                 <>
-                <span className="ampm" onClick={()=>this.setState({isAm: false, bn: 'am'})}>am</span>
+                <button className="ampm" onClick={()=>this.setState({isAm: false, setAmOrPm: 'am'})}>am</button>
                 </>
               :
                 <>
-                <span className="ampm" onClick={()=>this.setState({isAm: true,bn: 'pm'})}>pm</span>
+                <button className="ampm" onClick={()=>this.setState({isAm: true,setAmOrPm: 'pm'})}>pm</button>
                 </>
           }
           
