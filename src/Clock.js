@@ -9,7 +9,8 @@ export default class Clock extends Component {
       ampm: false,
       hour: 12,
       minute: '00',
-      bn: 'am'
+      bn: 'am',
+      check: true
       };
   }
 
