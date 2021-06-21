@@ -16,7 +16,7 @@
   width: 600vw;
   max-height: 400px;
   height: 400vh;
-  position: relative;
+  /*position: relative;*/
   text-align: center;
   padding: 1.2rem;
   box-shadow: 0 2px 30px rgba(255, 255, 255, 0);
@@ -31,8 +31,8 @@
   height: 300vh;
   border-radius: 50%;
   position: absolute;
-  top: 20%;
-  left: 25%;
+  top: 25%;
+  left: 50%;
   /* transform: translate(-50%, -50%); */
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
   font-size: 24px;
@@ -90,7 +90,7 @@
   font-weight: 700;
 }
 
-.button12 {
+.clock-digit{
   position: absolute;
   background-color: #ffffff;
   border: none;
@@ -100,174 +100,69 @@
   font-size: var(--number-font-size);
   margin: 2px 2px;
   cursor: pointer;
+  color: var(--numbers-color);
+}
+
+.digit12 {
   top: 5%;
   left: 45%;
-  color: var(--numbers-color);
 }
 
-.button1 {
-  position: absolute;
-  background-color: #ffffff;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: var(--number-font-size);
-  margin: 2px 2px;
-  cursor: pointer;
+.digit1 {
   top: 10%;
   right: 24%;
-  color: var(--numbers-color);
 }
 
-.button11 {
-  position: absolute;
-  background-color: #ffffff;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: var(--number-font-size);
-  margin: 2px 2px;
-  cursor: pointer;
-  top: 10%;
-  left: 26%;
-  color: var(--numbers-color);
-}
-
-.button2 {
-  position: absolute;
-  background-color: #ffffff;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: var(--number-font-size);
-  margin: 2px 2px;
-  cursor: pointer;
+.digit2 {
   top: 25%;
   right: 10%;
-  color: var(--numbers-color);
 }
 
-.button3 {
-  position: absolute;
-  background-color: #ffffff;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: var(--number-font-size);
-  margin: 2px 2px;
-  cursor: pointer;
+.digit3 {
   top: 46%;
   right: 5%;
-  color: var(--numbers-color);
 }
 
-.button4 {
-  position: absolute;
-  background-color: #ffffff;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: var(--number-font-size);
-  margin: 2px 2px;
-  cursor: pointer;
+.digit4 {
   top: 67%;
   right: 10%;
-  color: var(--numbers-color);
 }
 
-.button5 {
-  position: absolute;
-  background-color: #ffffff;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: var(--number-font-size);
-  margin: 2px 2px;
-  cursor: pointer;
+.digit5 {
   top: 80%;
   right: 24%;
-  color: var(--numbers-color);
 }
 
-.button6 {
-  position: absolute;
-  background-color: #ffffff;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: var(--number-font-size);
-  margin: 2px 2px;
-  cursor: pointer;
+.digit6 {
   bottom: 2%;
   left: 46%;
-  color: var(--numbers-color);
 }
 
-.button7 {
-  position: absolute;
-  background-color: #ffffff;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: var(--number-font-size);
-  margin: 2px 2px;
-  cursor: pointer;
+.digit7 {
   top: 82%;
   left: 26%;
   color: var(--numbers-color);
 }
 
-.button8 {
-  position: absolute;
-  background-color: #ffffff;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: var(--number-font-size);
-  margin: 2px 2px;
-  cursor: pointer;
+.digit8 {
   top: 67%;
   left: 10%;
-  color: var(--numbers-color);
 }
 
-.button9 {
-  position: absolute;
-  background-color: #ffffff;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: var(--number-font-size);
-  margin: 2px 2px;
-  cursor: pointer;
+.digit9 {
   top: 46%;
   left: 6%;
-  color: var(--numbers-color);
+
 }
 
-.button10 {
-  position: absolute;
-  background-color: #ffffff;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: var(--number-font-size);
-  margin: 2px 2px;
-  cursor: pointer;
+.digit10 {
   top: 25%;
   left: 10%;
-  color: var(--numbers-color);
+}
+
+.digit11 {
+  top: 10%;
+  left: 26%;
 }
 
 .ampm {
