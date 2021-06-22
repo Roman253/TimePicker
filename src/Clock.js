@@ -10,7 +10,6 @@ export default class Clock extends Component {
       setHour: 12,
       setMinute: '0',
       setAmOrPm: 'AM',
-      buttons: [],
       };
   }
 
@@ -45,8 +44,6 @@ export default class Clock extends Component {
     return buttons;
   }
 
-
-
   render() {
     return (
       <div className="container">
@@ -54,19 +51,19 @@ export default class Clock extends Component {
         <h2>Time set to {this.state.setAmOrPm} {this.state.setHour}:{this.pad(this.state.setMinute)} </h2>
         <div className="clock">
           <div
-            className="hour_hand"
+            className="hand hour"
             style={{
               transform: `rotateZ(${this.state.time.getHours() * 30+this.state.time.getMinutes()/2}deg)`
             }}
           />
           <div
-            className="min_hand"
+            className="hand min"
             style={{
               transform: `rotateZ(${this.state.time.getMinutes() * 6}deg)`
             }}
           />
           <div
-            className="sec_hand"
+            className="hand sec"
             style={{
               transform: `rotateZ(${this.state.time.getSeconds() * 6}deg)`
             }}
@@ -84,9 +81,7 @@ export default class Clock extends Component {
             <>
             <button className="ampm" onClick={()=>this.setState({isAm: true,setAmOrPm: 'PM'})}>PM</button>
             </>
-          }
-          
-          
+          }          
         </div>
       </div>
         

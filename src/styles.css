@@ -16,7 +16,7 @@
   width: 600vw;
   max-height: 400px;
   height: 400vh;
-  /*position: relative;*/
+  position: relative;
   text-align: center;
   padding: 1.2rem;
   box-shadow: 0 2px 30px rgba(255, 255, 255, 0);
@@ -54,34 +54,30 @@
   border: 2px solid #fff;
 }
 
-.hour_hand {
+.hand {
   position: absolute;
+  background: var(--hands-color);
+  transform-origin: bottom;
+}
+.hour {
   width: 6px;
   height: 60px;
-  background: var(--hands-color);
   top: 30%;
-  left: 49%;
-  transform-origin: bottom;
+  left: 49%; 
 }
 
-.min_hand {
-  position: absolute;
+.min {
   width: 4px;
   height: 80px;
-  background: var(--hands-color);
   top: 22.5%;
   left: 49%;
-  transform-origin: bottom;
 }
 
-.sec_hand {
-  position: absolute;
+.sec {
   width: 2px;
   height: 118px;
-  background: var(--hands-color);
   top: 10.5%;
   left: 50%;
-  transform-origin: bottom;
 }
 
 .clock span {
@@ -111,6 +107,11 @@
 .digit1 {
   top: 10%;
   right: 24%;
+}
+
+.digit11 {
+  top: 10%;
+  left: 26%;
 }
 
 .digit2 {
@@ -158,11 +159,6 @@
 .digit10 {
   top: 25%;
   left: 10%;
-}
-
-.digit11 {
-  top: 10%;
-  left: 26%;
 }
 
 .ampm {
