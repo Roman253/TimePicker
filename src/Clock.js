@@ -46,10 +46,9 @@ export default class Clock extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="clock">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-        <h2>Time set to {this.state.setAmOrPm} {this.state.setHour}:{this.pad(this.state.setMinute)} </h2>
-        <div className="clock">
+        <h2 className="TimeSet">Time set to {this.state.setAmOrPm} {this.state.setHour}:{this.pad(this.state.setMinute)} </h2>
           <div
             className="hand hour"
             style={{
@@ -82,10 +81,7 @@ export default class Clock extends Component {
             <button className="ampm" onClick={()=>this.setState({isAm: true,setAmOrPm: 'PM'})}>PM</button>
             </>
           }          
-        </div>
       </div>
-        
-      
     );
   }
 }
