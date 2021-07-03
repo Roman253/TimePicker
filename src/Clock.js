@@ -7,9 +7,9 @@ export default class Clock extends Component {
       time: new Date(),
       isPickingHours: true,
       isAm: false,
-      setHour: 12,
-      setMinute: '0',
-      setAmOrPm: 'AM',
+      currentHour: 12,
+      currentMinute: '0',
+      currentAmOrPm: 'AM',
       };
   }
 
@@ -25,7 +25,7 @@ export default class Clock extends Component {
       const buttons = [];
       for (let i = 1; i < 13 ; ++i) {
         buttons.push(<button className={"clock-digit" + " digit" + (i) }
-        onClick={()=>this.setState({isPickingHours: false,setHour: (i)})}>{i}</button>)
+        onClick={()=>this.setState({isPickingHours: false,currentHour: (i)})}>{i}</button>)
       }
       return buttons;
   }
@@ -39,7 +39,7 @@ export default class Clock extends Component {
     for (let i = 0, k = 5 ; i < 12 ; ++i, k+=5) {
       if (k === 60) {k=0};
       buttons.push(<button className={"clock-digit" + " digit" + (i+1) }
-      onClick={()=>this.setState({isPickingHours: true,setMinute: (k)})}>{k}</button>);
+      onClick={()=>this.setState({isPickingHours: true,currentMinute: (k)})}>{k}</button>);
     }
     return buttons;
   }
@@ -47,8 +47,19 @@ export default class Clock extends Component {
   render() {
     return (
       <div className="clock">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-        <h2 className="TimeSet">Time set to {this.state.setAmOrPm} {this.state.setHour}:{this.pad(this.state.setMinute)} </h2>
+        {/*<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>*/}
+        <h2 className="TimeSet"> 
+        {
+            this.state.isAm ?
+            <>
+            <button className="ampm" onClick={()=>this.setState({isAm: false, currentAmOrPm: 'AM'})}>AM</button>
+            </>
+            :
+            <>
+            <button className="ampm" onClick={()=>this.setState({isAm: true,currentAmOrPm: 'PM'})}>PM</button>
+            </>
+        }  
+        {this.state.currentHour}:{this.pad(this.state.currentMinute)} </h2>
           <div
             className="hand hour"
             style={{
@@ -71,16 +82,7 @@ export default class Clock extends Component {
           {
             this.state.isPickingHours ? <> {this.digitsHours()} </>  : <> {this.digitsMinuts()} </>
           }
-          {
-            this.state.isAm ?
-            <>
-            <button className="ampm" onClick={()=>this.setState({isAm: false, setAmOrPm: 'AM'})}>AM</button>
-            </>
-            :
-            <>
-            <button className="ampm" onClick={()=>this.setState({isAm: true,setAmOrPm: 'PM'})}>PM</button>
-            </>
-          }          
+           
       </div>
     );
   }

@@ -7,23 +7,26 @@
   --numbers-color: rgb(86, 142, 247);
   --hands-color: rgb(86, 142, 247);
   --timeSetTo-color:rgb(219, 139, 163);
-  --number-font-size: 22px;
+  --number-font-size: 25px;
 }
 
 
 .clock {
   max-width: 300px;
-  width: 300vw;
+  min-width: 250px;
   max-height: 300px;
-  height: 300vh;
+  min-height: 250px;
+  width: 30vw;
+  height: 30vw;
   border-radius: 50%;
-  position: absolute;
-  top: 25%;
-  left: 50%;
+  position: relative;
+  top: 25vh;
   /* transform: translate(-50%, -50%); */
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
-  font-size: 24px;
   color: #444;
+  text-align: center;
+  background-size:100%;
+  margin: auto;
   text-align: center;
 }
 
@@ -38,47 +41,61 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 2px solid #fff;
+  /*border: 2px solid #fff;*/
 }
-
+/*
 .clock span {
   position: absolute;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
 }
-
+*/
 
 .TimeSet{
   position: relative;
-  top: -80px;
+  top: -50px;
   color: var(--timeSetTo-color);
   text-align: center;
-  font-size: 28px
+  font-size: var(--number-font-size);
 }
+
+.ampm {
+  background-color: #ffffff00;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: var(--number-font-size);
+  cursor: pointer;
+  color: var(--timeSetTo-color);
+  left: 0%;
+  /*margin: 2px 2px;*/
+}
+
 .hand {
   position: absolute;
   background: var(--hands-color);
   transform-origin: bottom;
 }
 .hour {
-  width: 6px;
-  height: 60px;
-  top: 30%;
+  width: 2%;
+  height: 15%;
+  top: 35%;
   left: 49%; 
 }
 
 .min {
-  width: 4px;
-  height: 80px;
-  top: 22.5%;
-  left: 49%;
+  width: 1.4%;
+  height: 25%;
+  top: 24.5%;
+  left: 49.7%;
 }
 
 .sec {
-  width: 2px;
-  height: 118px;
-  top: 10.5%;
-  left: 50%;
+  width: 0.8%;
+  height: 33%;
+  top: 17.4%;
+  left: 49.8%;
 }
 
 .clock-digit{
@@ -89,19 +106,19 @@
   text-decoration: none;
   display: inline-block;
   font-size: var(--number-font-size);
-  margin: 2px 2px;
+  /*margin: 2px 2px;*/
   cursor: pointer;
   color: var(--numbers-color);
 }
 
 .digit12 {
   top: 5%;
-  left: 45%;
+  left: 47%;
 }
 
 .digit1 {
   top: 10%;
-  right: 24%;
+  right: 22%;
 }
 
 .digit11 {
@@ -126,16 +143,16 @@
 
 .digit5 {
   top: 80%;
-  right: 24%;
+  right: 22%;
 }
 
 .digit6 {
   bottom: 2%;
-  left: 46%;
+  left: 47%;
 }
 
 .digit7 {
-  top: 82%;
+  top: 80%;
   left: 26%;
 }
 
@@ -153,20 +170,5 @@
 .digit10 {
   top: 25%;
   left: 10%;
-}
-
-.ampm {
-  position: absolute;
-  background-color: #ffffff00;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: var(--number-font-size);
-  margin: 2px 2px;
-  cursor: pointer;
-  top: 0.1%;
-  left: 0.1%;
-  color: var(--numbers-color);
 }
 
