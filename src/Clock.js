@@ -4,28 +4,33 @@ export default class Clock extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      time: new Date(),
       isPickingHours: true,
-      isAm: false,
-      currentHour: 12,
-      currentMinute: '0',
-      currentAmOrPm: 'AM',
-      };
+      isAm: this.props.value.getHours()< 12,
+      currentHour: this.props.value.getHours(),
+      currentMinute: this.props.value.getMinutes(),
+      currentAmOrPm: this.props.value.getHours()< 13 ? 'AM' :'PM' ,
+    }
   }
 
-  componentDidMount() {
-    this.timerId = setInterval(() => {
-      this.setState({
-        time: new Date()
-      });
-    }, 1000);
+  componentDidUpdate(prevProps, prevState, snapshot){
+    if(prevState.currentHour !== this.state.currentHour || 
+      prevState.currentMinute !== this.state.currentMinute ||
+      prevState.currentAmOrPm !== this.state.currentAmOrPm
+      ){
+        this.props.onTimeChange(this.state)
+      }
   }
+
 
   digitsHours() { 
       const buttons = [];
       for (let i = 1; i < 13 ; ++i) {
-        buttons.push(<button className={"clock-digit" + " digit" + (i) }
-        onClick={()=>this.setState({isPickingHours: false,currentHour: (i)})}>{i}</button>)
+        buttons.push(<button key={i} className={"clock-digit" + " digit" + (i) }
+        style={{backgroundColor: this.props.digitsBackgroundColor, 
+          color: this.props.digitsColor}}
+        onClick={()=>{
+          this.setState({isPickingHours: false,currentHour: (i)})
+        }}>{i}</button>)
       }
       return buttons;
   }
@@ -38,51 +43,65 @@ export default class Clock extends Component {
     const buttons = [];
     for (let i = 0, k = 5 ; i < 12 ; ++i, k+=5) {
       if (k === 60) {k=0};
-      buttons.push(<button className={"clock-digit" + " digit" + (i+1) }
-      onClick={()=>this.setState({isPickingHours: true,currentMinute: (k)})}>{k}</button>);
+      buttons.push(<button key={i} className={"clock-digit" + " digit" + (i+1) }
+      style={{backgroundColor: this.props.digitsBackgroundColor,
+         color: this.props.digitsColor}}
+      onClick={()=>{
+        this.setState({isPickingHours: true,currentMinute: (k)})
+      }}>{k}</button>);
     }
     return buttons;
   }
-
+  
   render() {
     return (
-      <div className="clock">
-        {/*<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>*/}
-        <h2 className="TimeSet"> 
-        {
-            this.state.isAm ?
-            <>
-            <button className="ampm" onClick={()=>this.setState({isAm: false, currentAmOrPm: 'AM'})}>AM</button>
-            </>
-            :
-            <>
-            <button className="ampm" onClick={()=>this.setState({isAm: true,currentAmOrPm: 'PM'})}>PM</button>
-            </>
-        }  
-        {this.state.currentHour}:{this.pad(this.state.currentMinute)} </h2>
-          <div
-            className="hand hour"
-            style={{
-              transform: `rotateZ(${this.state.time.getHours() * 30+this.state.time.getMinutes()/2}deg)`
-            }}
-          />
-          <div
-            className="hand min"
-            style={{
-              transform: `rotateZ(${this.state.time.getMinutes() * 6}deg)`
-            }}
-          />
-          <div
-            className="hand sec"
-            style={{
-              transform: `rotateZ(${this.state.time.getSeconds() * 6}deg)`
-            }}
-          />
-
+      <div>
+        <div className="clock" style={{backgroundColor: this.props.backgroundColor}}>
+          <h2 className="TimeSet" > 
           {
-            this.state.isPickingHours ? <> {this.digitsHours()} </>  : <> {this.digitsMinuts()} </>
-          }
-           
+              this.state.currentAmOrPm === 'AM' ?
+              <>
+              <button className="ampm" onClick={()=>
+                this.setState({isAm: false, currentAmOrPm: 'PM'})
+              }>AM</button>
+              </>
+              :
+              <>
+              <button className="ampm" onClick={()=>{
+                this.setState({isAm: true,currentAmOrPm: 'AM'})}
+              }>PM</button>
+              </>
+          }  
+          {this.state.currentHour}:{this.pad(this.state.currentMinute)} 
+          </h2>
+            <div
+              className="hand hour"
+              style={{
+                transform: `rotateZ(${this.props.value.getHours() * 30+
+                  this.props.value.getMinutes()/2}deg)`,
+                  background: this.props.handsColor}}
+            />
+            <div
+              className="hand min"
+              style={{
+                transform: `rotateZ(${this.props.value.getMinutes() * 6}deg)`,
+                background: this.props.handsColor
+              }}
+            />
+            <div
+              className="hand sec"
+              style={{
+                transform: `rotateZ(${this.props.value.getSeconds() * 6}deg)`,
+                background: this.props.handsColor
+              }}
+            />
+
+            {
+              this.state.isPickingHours ? 
+              <> {this.digitsHours()} </>  : <> {this.digitsMinuts()} </>
+            }
+
+        </div>
       </div>
     );
   }

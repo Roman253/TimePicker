@@ -12,9 +12,7 @@
 
 
 .clock {
-  max-width: 300px;
   min-width: 250px;
-  max-height: 300px;
   min-height: 250px;
   width: 30vw;
   height: 30vw;
@@ -23,7 +21,7 @@
   top: 25vh;
   /* transform: translate(-50%, -50%); */
   box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
-  color: #444;
+  /*color: #444;*/
   text-align: center;
   background-size:100%;
   margin: auto;
@@ -76,6 +74,7 @@
   position: absolute;
   background: var(--hands-color);
   transform-origin: bottom;
+  border-radius: 5;
 }
 .hour {
   width: 2%;
@@ -109,6 +108,7 @@
   /*margin: 2px 2px;*/
   cursor: pointer;
   color: var(--numbers-color);
+  border-radius: 15px;
 }
 
 .digit12 {
