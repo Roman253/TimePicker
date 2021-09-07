@@ -3,12 +3,9 @@
   "version": "1.0.7",
   "description": "",
   "keywords": [],
-  "main": "src/lib/index.js",
-  "module": "src/lib/index.js",
-  "files": [
-    "src",
-    "README.md"
-  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [ "dist", "README.md" ],
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "react": "16.8.6",
