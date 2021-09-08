@@ -39,7 +39,7 @@ React Analogue Time Picker requires [Node.js](https://nodejs.org/) v10+ to run.
     }
 ```
 
-#### User Guide
+## User Guide
 | Prop name       | Description                                | Default Value | Example values                                                                                 |
 |-----------------|--------------------------------------------|---------------|------------------------------------------------------------------------------------------------|
 | onTimeChange    | A function called when a  time is selected |      n/a      | {   currentHour: Integer,   currentMinute: Integer,   isAm: Boolean,   currentAmOrPm: String } |
@@ -54,3 +54,5 @@ React Analogue Time Picker requires [Node.js](https://nodejs.org/) v10+ to run.
 
 MIT
 
+## author: rom.data
+   Would love to hear you thoughts and suggestion at i.mydata132@gmail.com
