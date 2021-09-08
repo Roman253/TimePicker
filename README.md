@@ -1,8 +1,6 @@
 # React Analog Time Picker
 ## _Simple and easy to use timepicker_
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-
 ## Demo
 https://react-analog-time-picker.netlify.app/
 
