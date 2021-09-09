@@ -30,9 +30,11 @@ React Analogue Time Picker requires [Node.js](https://nodejs.org/) v10+ to run.
                 <Clock 
                     value={value}
                     onTimeChange={onTimeChange}
-                    digitsColor={'blue'}
-                    fontsColor={'yellow'}
+                    digitsColor={'white'}
+                    fontsColor={'rgb(86, 142, 247)'}
                     backgroundColor={'white'}
+                    handsColor={'rgb(86, 142, 247)'}
+                    timeSetColor={'rgb(219, 139, 163)'}
                 />
             </div>
         )
