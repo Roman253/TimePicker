@@ -56,11 +56,14 @@ export default class Clock extends Component {
     return (
       <div>
         <div className="clock" style={{backgroundColor: this.props.backgroundColor}}>
-          <h2 className="TimeSet" > 
+          <h2 className="TimeSet"
+              style={{color: this.props.timeSetcolor}} > 
           {
               this.state.currentAmOrPm === 'AM' ?
               <>
-              <button className="ampm" onClick={()=>this.setState({isAm: false, currentAmOrPm: 'PM'})}>AM</button>
+              <button className="ampm" 
+                style={{color: this.props.timeSetcolor}}
+              onClick={()=>this.setState({isAm: false, currentAmOrPm: 'PM'})}>AM</button>
               </>
               :
               <>
@@ -74,19 +77,22 @@ export default class Clock extends Component {
             <div
               className="hand hour"
               style={{
-                transform: `rotateZ(${this.props.value.getHours() * 30+this.props.value.getMinutes()/2}deg)`
+                transform: `rotateZ(${this.props.value.getHours() * 30+this.props.value.getMinutes()/2}deg)`,
+                background: this.props.handsColor
               }}
             />
             <div
               className="hand min"
               style={{
-                transform: `rotateZ(${this.props.value.getMinutes() * 6}deg)`
+                transform: `rotateZ(${this.props.value.getMinutes() * 6}deg)`,
+                background: this.props.handsColor
               }}
             />
             <div
               className="hand sec"
               style={{
-                transform: `rotateZ(${this.props.value.getSeconds() * 6}deg)`
+                transform: `rotateZ(${this.props.value.getSeconds() * 6}deg)`,
+                background: this.props.handsColor
               }}
             />
 
