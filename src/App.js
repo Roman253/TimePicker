@@ -17,6 +17,8 @@ export default function TimePicker(){
                 digitsColor={'white'}
                 fontsColor={'rgb(86, 142, 247)'}
                 backgroundColor={'white'}
+                handsColor={'rgb(86, 142, 247)'}
+                timeSetcolor={'rgb(219, 139, 163)'}
             />
         </div>
     )

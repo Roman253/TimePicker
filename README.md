@@ -47,8 +47,11 @@ React Analogue Time Picker requires [Node.js](https://nodejs.org/) v10+ to run.
 | onTimeChange    | A function called when a  time is selected |      n/a      | {   currentHour: Integer,   currentMinute: Integer,   isAm: Boolean,   currentAmOrPm: String } |
 | value           | Initial time                               |      n/a      | new Date()                                                                                     |
 | backgroundColor | Clock background color                     |     white     | 'white', 'yellow', etc                                                                         |
-| fontsColor      | Font color for the time picker             |     pink     | 'white', 'black', etc                                                                          |
-| digitsColor     | Color for the clock digits                 |     pink     | 'green', 'yellow', 'blue'                                                                      |
+| fontsColor      | Font color for the time picker             |     rgb(86, 142, 247)| 'white', 'black', etc                                                                      |
+| digitsColor     | Color for the clock digits                 |     white     | 'white', 'yellow', 'blue', etc                                                                      |
+| handsColor      | Color for the hands                        |    rgb(86, 142, 247) |'green','blue', 'pink', etc                                                                        |
+|timeSetcolor     | Color for the hands timeSet                |    rgb(219, 139, 163)'|'green','blue', 'pink', etc                                                                    | 
+
 
 
 
