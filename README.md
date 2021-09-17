@@ -1,5 +1,4 @@
-# React Analog Time Picker
-## _Simple and easy to use timepicker_
+## _Easy to use and simple to install Analog Time Picker_
 
 ## Demo
 https://react-analog-time-picker.netlify.app/
@@ -61,3 +60,6 @@ MIT
 
 ## author: rom.data
    Would love to hear you thoughts and suggestion at i.mydata132@gmail.com
+
+## Troubleshooting    
+    If you get an error starting with "There might be a problem with the project dependency tree". It is caused by yarn. you can either install with npm: 'npx create-react-app --use-npm my-app', or uninstall yarn
