@@ -1,7 +1,7 @@
 {
   "name": "react-analog-time-picker",
-  "version": "1.0.14",
-  "description": "react analog time picker",
+  "version": "1.0.24",
+  "description": "Easy to use and simple to install Analog Time Picker",
   "keywords": [  "react",
     "react-time-picker",
     "react-component",
@@ -10,7 +10,7 @@
     "component",  
     "timepicker",
     "circular",
-    "analog"  ],
+    "analog"],
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [ "dist", "README.md" ],
