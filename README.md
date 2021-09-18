@@ -65,4 +65,4 @@ MIT
     If you get an error starting with "There might be a problem with the project dependency tree". It is caused by yarn. you can either install with npm: 'npx create-react-app --use-npm my-app', or uninstall yarn
 
 ## Special thanks
-    [Haifa:Dev Developers Community](https://haifadev.netlify.app/) and [Polarts](https://github.com/Polarts) for the guidance!
+   Thanks to [Haifa:Dev Developers Community](https://haifadev.netlify.app/) and [Polarts](https://github.com/Polarts) for the guidance!
