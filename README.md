@@ -4,8 +4,8 @@
 https://react-analog-time-picker.netlify.app/
 
 ## Installation
-Install by executing ```npm i react-analog-time-picker or yarn add react-analog-time-picker```.
-Import by adding ```import Clock from 'react-analog-time-picker```.
+Install by executing ```npm i react-analog-time-picker``` or ```yarn add react-analog-time-picker```.
+Import by adding ```import Clock from 'react-analog-time-picker'```.
 Use by adding ```<Clock />```. Use onChange prop for getting new values.
 
 
@@ -49,7 +49,7 @@ React Analogue Time Picker requires [Node.js](https://nodejs.org/) v10+ to run.
 | fontsColor      | Font color for the time picker             |     rgb(86, 142, 247)| 'white', 'black', etc                                                                      |
 | digitsColor     | Color for the clock digits                 |     white     | 'white', 'yellow', 'blue', etc                                                                      |
 | handsColor      | Color for the hands                        |    rgb(86, 142, 247) |'green','blue', 'pink', etc                                                                        |
-|timeSetcolor     | Color for the hands timeSet                |    rgb(219, 139, 163)'|'green','blue', 'pink', etc                                                                    | 
+|timeSetcolor     | Color for the timeSet                |    rgb(219, 139, 163)'|'green','blue', 'pink', etc                                                                    | 
 
 
 
@@ -59,7 +59,7 @@ React Analogue Time Picker requires [Node.js](https://nodejs.org/) v10+ to run.
 MIT
 
 ## author: rom.data
-   Would love to hear you thoughts and suggestion at i.mydata132@gmail.com
+   Would love to read your thoughts and suggestion at i.mydata132@gmail.com
 
 ## Troubleshooting    
     If you get an error starting with "There might be a problem with the project dependency tree". It is caused by yarn. you can either install with npm: 'npx create-react-app --use-npm my-app', or uninstall yarn
